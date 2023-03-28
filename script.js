@@ -26,42 +26,42 @@ bgm.src = 'bgm/FF7Chocobo.mp3';
 
 function rockP1() {
     valueOne = "rock";
-    countDown();
+    gameStart(valueOne);
 }
 
 function paperP1() {
     valueOne = "paper";
-    countDown();
+    gameStart(valueOne);
 }
 
 function scissorsP1() {
     valueOne = "scissors";
-    countDown();
+    gameStart(valueOne);
 }
 
-function countDown() {
-    if(state === true) {
-        signs.textContent = String(count);
+// function countDown() {
+//     if(state === true) {
+//         signs.textContent = String(count);
 
-        let countInterval = setInterval(function() {
-            count--;
+//         let countInterval = setInterval(function() {
+//             count--;
 
-            if(count === 1) {
-                clearInterval(countInterval);
-            }
+//             if(count === 1) {
+//                 clearInterval(countInterval);
+//             }
 
-            signs.textContent = String(count);
-        }, interval);
+//             signs.textContent = String(count);
+//         }, interval);
 
-        setTimeout(function() {
-            gameStart(valueOne);
-        }, delay);
-    } 
+//         setTimeout(function() {
+//             gameStart(valueOne);
+//         }, delay);
+//     } 
 
-    else {
-        return;
-    }
-}
+//     else {
+//         return;
+//     }
+// }
 
 function winResultP1() {
     console.log(`PLAYER1: ${valueOne} VS COM: ${valueCom}`);
